@@ -1,6 +1,8 @@
 require("dotenv").config();
+require("./utils/redis")
 const express = require("express");
-const PORT = process.env.PORT;
+const { settings } = require("./settings/application");
+const PORT = settings.port;
 
 const app = express()
 app.use(express.json())
