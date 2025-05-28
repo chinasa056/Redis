@@ -1,3 +1,4 @@
+require("dotenv").config()
 exports.settings = {
     port: process.env.PORT,
     open_weather_key: process.env.OPEN_WEATHER_API_KEY,

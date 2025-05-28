@@ -9,6 +9,8 @@ const redis = new Redis({
 //   tls: {} // Redis Cloud requires TLS
 });
 
+// const client = new Redis()
+
 redis.on('connect', () => {
   console.log('Connected to Redis Cloud');
 });
@@ -16,5 +18,7 @@ redis.on('connect', () => {
 redis.on('error', (err) => {
   console.error('Redis error:', err);
 });
+
+
 
 module.exports = redis
